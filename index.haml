@@ -1,0 +1,62 @@
+!!!5
+%html{class:"no-js",lang: "es"}
+  %head
+    %meta{charset:"utf-8"}
+    %title La mejor comida en restaurante facilito
+    %meta{name:"description",content:"Come rico en el mejor rastaurante de la ciudad"}
+    %link{rel:"stylesheet",href:"https://fonts.googleapis.com/css?family=Dancing+Script"}
+    %link{rel:"stylesheet",href:"css/normalize.css"}
+    %link{rel:"stylesheet",href:"css/bootstrap.css"}
+    %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css"}
+
+    %link{rel:"stylesheet",href:"css/style.css"}
+    %meta{name:"viewport",content:"width=devide-width,initial-scale=1"}
+    %script{src:"js/vendor/modernizr-3.5.0.min.js"}
+
+
+  %body
+    ="<!--[if lt IE 9]>"
+    %p{class:"browserupgrade"}
+      Estas en un navegador
+      %strong desactualizado
+      Por favor
+      %a{href:"http://browsehappy.com/"}
+        actualiza tu navegador
+      para una mejor experiencia
+    ="<![endif]-->"
+    .video-container
+      %video{autoplay:true,loop:true,width:"1280",height:"720",poster:"video/industrial.jpg"}
+        %source{src:"video/industrial.mp4",type:"video/mp4"}
+        %source{src:"video/industrial.webm",type:"video/webm"}
+    .row.full-height.middle-xs.center-xs.relative.up
+      .col-xs-12
+        .box.white-text
+          %img{src:"images/logo.png",width:200}
+          %h1.dancing-script.title.no-margin Restaurante Facilito
+          %p#is-open
+            %i.glyphicon.glyphicon-time
+            Abierto Ahora
+      %nav.fixed.top.right.navigation.white-text#navigation
+        -menu = ["Inicio","Menu","Galeria","Contacto","Como llegar"]
+        %ul.list-inline
+          -menu.each do |item|
+            %li
+              %a{}= item
+      .absolute.black.white-text.bottom.full-width.large-padding#description
+        .row.middle-xs.center-xs
+          .col-xs-7.col-sm-6.white-text.medium
+            Atencion calida y comida prepara por artistas
+          .col-xs.hidden
+            .box
+              %nav.text-right.navigation
+                %ul.list-inline
+                  -menu.each do |item|
+                    %li
+                      %a{}= item
+
+
+    .full-height
+
+    %script{src:"http://code.jquery.com/jquery-3.3.1.min.js",integrity:"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=",crossorigin:"anonymous"}
+    %script
+      window.JQuery || document.write("<script src="/js/vendor/jquery-3.2.1.min.js" ></script>")
